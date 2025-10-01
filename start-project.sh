@@ -42,24 +42,24 @@ fi
 
 # Start Postgres
 echo "Starting Postgres..."
-pt run postgres --background
+pt run postgres --no-ui &
 echo "Waiting for Postgres to be ready..."
 sleep 10
 
 # Start Temporal
 echo "Starting Temporal..."
-pt run temporal --background
+pt run temporal --no-ui &
 echo "Waiting for Temporal to be ready..."
 sleep 10
 
 # Start Temporal UI
 echo "Starting Temporal UI..."
-pt run temporal-ui --background
+pt run temporal-ui --no-ui &
 sleep 5
 
 # Verify services are running
 echo "Checking service status..."
-pt list-services
+pt services list
 
 # Wait a bit more to ensure Postgres is fully ready
 echo "Waiting for services to fully initialize..."

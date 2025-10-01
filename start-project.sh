@@ -42,21 +42,28 @@ fi
 
 # Start Postgres
 echo "Starting Postgres..."
-pt run postgres &
-POSTGRES_PID=$!
-sleep 3
+pt run postgres --background
+echo "Waiting for Postgres to be ready..."
+sleep 10
 
 # Start Temporal
 echo "Starting Temporal..."
-pt run temporal &
-TEMPORAL_PID=$!
-sleep 3
+pt run temporal --background
+echo "Waiting for Temporal to be ready..."
+sleep 10
 
 # Start Temporal UI
 echo "Starting Temporal UI..."
-pt run temporal-ui &
-TEMPORAL_UI_PID=$!
-sleep 2
+pt run temporal-ui --background
+sleep 5
+
+# Verify services are running
+echo "Checking service status..."
+pt list-services
+
+# Wait a bit more to ensure Postgres is fully ready
+echo "Waiting for services to fully initialize..."
+sleep 5
 
 # Start Backend (Spring Boot)
 echo "Starting Backend API..."

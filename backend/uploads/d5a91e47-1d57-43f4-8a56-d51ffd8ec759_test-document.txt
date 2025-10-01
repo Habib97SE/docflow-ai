@@ -1,0 +1,5 @@
+This is a test document for the DocFlow AI system.
+
+Contract Agreement:
+This contract is between Party A and Party B.
+Terms and conditions apply.

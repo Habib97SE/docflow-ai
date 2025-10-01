@@ -12,6 +12,34 @@ if ! command -v pt &> /dev/null; then
     exit 1
 fi
 
+# Check for Java and set JAVA_HOME if not set
+if [ -z "$JAVA_HOME" ]; then
+    echo "JAVA_HOME not set. Attempting to find Java..."
+    
+    # Try to find Java
+    if command -v java &> /dev/null; then
+        JAVA_PATH=$(which java)
+        # Get the real path (resolve symlinks)
+        JAVA_PATH=$(readlink -f "$JAVA_PATH")
+        # Get the directory (remove /bin/java)
+        export JAVA_HOME="${JAVA_PATH%/bin/java}"
+        echo "Found Java at: $JAVA_HOME"
+    else
+        echo "Error: Java not found. Please install Java 17 or higher."
+        echo "Ubuntu/Debian: sudo apt install openjdk-17-jdk"
+        echo "Then set JAVA_HOME in your ~/.bashrc:"
+        echo "  export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64"
+        exit 1
+    fi
+fi
+
+# Verify Maven is available
+if ! command -v mvn &> /dev/null; then
+    echo "Error: Maven not found. Please install Maven."
+    echo "Ubuntu/Debian: sudo apt install maven"
+    exit 1
+fi
+
 # Start Postgres
 echo "Starting Postgres..."
 pt run postgres &

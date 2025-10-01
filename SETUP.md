@@ -116,15 +116,31 @@ If the startup script says Polytope is not found:
 
 If you get Java version errors:
 
-1. Make sure you have Java 17 or higher installed
-2. Set JAVA_HOME environment variable:
+1. **Install Java 17 or higher:**
    ```bash
-   # Linux/Mac
-   export JAVA_HOME=/path/to/java17
+   # Ubuntu/Debian/WSL
+   sudo apt update
+   sudo apt install openjdk-17-jdk
    
-   # Windows (PowerShell)
-   $env:JAVA_HOME="C:\path\to\java17"
+   # Verify installation
+   java -version
    ```
+
+2. **Set JAVA_HOME permanently (Ubuntu/WSL):**
+   ```bash
+   # Find Java installation path
+   sudo update-alternatives --config java
+   # Note the path (e.g., /usr/lib/jvm/java-17-openjdk-amd64)
+   
+   # Add to ~/.bashrc
+   echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64' >> ~/.bashrc
+   echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+3. **For Windows:**
+   - Download from https://adoptium.net/
+   - Set JAVA_HOME in System Environment Variables
 
 ### Maven Not Found
 

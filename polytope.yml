@@ -1,2 +1,12 @@
 include:
   - repo: gh:bluetext-io/bluetext
+  - modules/postgres
+  - modules/temporal
+  - modules/docflow-frontend
+tools:
+  default:
+    run:
+      - tool: "postgres"
+      - tool: "temporal"
+      - tool: "temporal-ui"
+      - tool: "docflow-frontend"

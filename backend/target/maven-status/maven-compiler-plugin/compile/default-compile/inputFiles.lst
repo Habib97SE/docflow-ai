@@ -1,0 +1,13 @@
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\workflow\DocumentActivities.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\controller\DocumentController.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\workflow\DocumentApprovalWorkflow.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\workflow\DocumentActivitiesImpl.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\model\Document.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\workflow\DocumentApprovalWorkflowImpl.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\workflow\AIAnalysisResult.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\dto\ApprovalDecisionRequest.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\dto\DocumentResponse.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\service\DocumentService.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\repository\DocumentRepository.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\config\TemporalConfig.java
+C:\Users\lawza\source\repos\docflow\backend\src\main\java\com\docflow\DocFlowApplication.java

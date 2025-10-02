@@ -1,0 +1,16 @@
+com/docflow/dto/ApprovalDecisionRequest.class
+com/docflow/repository/DocumentRepository.class
+com/docflow/config/TemporalConfig.class
+com/docflow/workflow/DocumentApprovalWorkflow.class
+com/docflow/controller/DocumentController.class
+com/docflow/service/DocumentService.class
+com/docflow/model/Document$DocumentStatus.class
+com/docflow/DocFlowApplication.class
+com/docflow/workflow/AIAnalysisResult.class
+com/docflow/dto/DocumentResponse.class
+com/docflow/model/Document.class
+com/docflow/workflow/DocumentApprovalWorkflow$WorkflowStatus.class
+com/docflow/workflow/DocumentActivitiesImpl.class
+com/docflow/workflow/DocumentActivities.class
+com/docflow/workflow/DocumentApprovalWorkflowImpl.class
+com/docflow/workflow/DocumentApprovalWorkflow$ApprovalResult.class
